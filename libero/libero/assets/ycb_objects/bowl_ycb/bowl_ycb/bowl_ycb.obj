@@ -1,5 +1,5 @@
-mtllib bowl.mtl
-usemtl bowl
+mtllib bowl_ycb.mtl
+usemtl bowl_ycb
 v -0.03255950 -0.05317780 -0.00717650
 v -0.02797650 -0.05181380 -0.01166750
 v -0.02799350 -0.05323880 -0.01023850

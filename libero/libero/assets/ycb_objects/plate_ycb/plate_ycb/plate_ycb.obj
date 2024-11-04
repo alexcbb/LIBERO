@@ -1,5 +1,5 @@
-mtllib plate.mtl
-usemtl plate
+mtllib plate_ycb.mtl
+usemtl plate_ycb
 v -0.05494215 -0.00549976 -0.01075648
 v -0.05609498 -0.00731265 -0.01056648
 v -0.05490494 -0.01038556 -0.01076448

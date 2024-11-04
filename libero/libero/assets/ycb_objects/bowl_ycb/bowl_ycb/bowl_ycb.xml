@@ -1,4 +1,4 @@
-<mujoco model="bowl">
+<mujoco model="bowl_ycb">
   <default>
     <default class="visual">
       <geom group="1" type="mesh" contype="0" conaffinity="0"/>
@@ -8,15 +8,15 @@
     </default>
   </default>
   <asset>
-    <texture type="2d" name="bowl" file="bowl.png"/>
-    <material name="bowl" texture="bowl" specular="0.4000000000000001" shininess="0.001"/>
-    <mesh name="bowl" file="bowl.obj"/>
+    <texture type="2d" name="bowl_ycb" file="bowl_ycb.png"/>
+    <material name="bowl_ycb" texture="bowl_ycb" specular="0.4000000000000001" shininess="0.001"/>
+    <mesh name="bowl_ycb" file="bowl_ycb.obj"/>
   </asset>
   <worldbody>
     <body>
     <body name="object">
-      <geom material="bowl" mesh="bowl" class="visual"/>
-      <geom mesh="bowl" class="collision"/>
+      <geom material="bowl_ycb" mesh="bowl_ycb" class="visual"/>
+      <geom mesh="bowl_ycb" class="collision"/>
     </body>
       <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.04" name="bottom_site" />
       <site rgba="0 0 0 0" size="0.005" pos="0 0 0.04" name="top_site" />

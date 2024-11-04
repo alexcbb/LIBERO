@@ -11,6 +11,18 @@ libero_task_map = {
         "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
         "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
     ],
+    "libero_distractors": [
+        "KITCHEN_SCENE1_put_the_black_bowl_on_top_of_the_cabinet_distractors",
+        "KITCHEN_SCENE2_put_the_black_bowl_at_the_front_on_the_plate_distractors",
+        "KITCHEN_SCENE3_put_the_frying_pan_on_the_stove_distractors",
+        "KITCHEN_SCENE4_close_the_bottom_drawer_of_the_cabinet_and_open_the_top_drawer_distractors",
+        "KITCHEN_SCENE5_put_the_ketchup_in_the_top_drawer_of_the_cabinet_distractors",
+        "KITCHEN_SCENE6_put_the_yellow_and_white_mug_to_the_front_of_the_white_mug_distractors",
+        "KITCHEN_SCENE7_put_the_white_bowl_on_the_plate_distractors",
+        "KITCHEN_SCENE8_put_the_right_moka_pot_on_the_stove_distractors",
+        "KITCHEN_SCENE9_turn_on_the_stove_and_put_the_frying_pan_on_it_distractors",
+        "KITCHEN_SCENE10_put_the_chocolate_pudding_in_the_top_drawer_of_the_cabinet_and_close_it_distractors"
+    ],
     "libero_object": [
         "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
         "pick_up_the_cream_cheese_and_place_it_in_the_basket",

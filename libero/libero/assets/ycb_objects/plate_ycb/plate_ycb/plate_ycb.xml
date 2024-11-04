@@ -1,4 +1,4 @@
-<mujoco model="plate">
+<mujoco model="plate_ycb">
   <default>
     <default class="visual">
       <geom group="1" type="mesh" contype="0" conaffinity="0"/>
@@ -8,15 +8,15 @@
     </default>
   </default>
   <asset>
-    <texture type="2d" name="plate" file="plate.png"/>
-    <material name="plate" texture="plate" specular="0.4000000000000001" shininess="0.001"/>
-    <mesh name="plate" file="plate.obj"/>
+    <texture type="2d" name="plate_ycb" file="plate_ycb.png"/>
+    <material name="plate_ycb" texture="plate_ycb" specular="0.4000000000000001" shininess="0.001"/>
+    <mesh name="plate_ycb" file="plate_ycb.obj"/>
   </asset>
   <worldbody>
     <body>
     <body name="object">
-      <geom material="plate" mesh="plate" class="visual"/>
-      <geom mesh="plate" class="collision"/>
+      <geom material="plate_ycb" mesh="plate_ycb" class="visual"/>
+      <geom mesh="plate_ycb" class="collision"/>
     </body>
       <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.04" name="bottom_site" />
       <site rgba="0 0 0 0" size="0.005" pos="0 0 0.04" name="top_site" />
