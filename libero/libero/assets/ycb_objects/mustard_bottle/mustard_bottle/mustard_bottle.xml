@@ -1,0 +1,26 @@
+<mujoco model="mustard_bottle">
+  <default>
+    <default class="visual">
+      <geom group="1" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="0" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="mustard_bottle" file="mustard_bottle.png"/>
+    <material name="mustard_bottle" texture="mustard_bottle" specular="0.4000000000000001" shininess="0.001"/>
+    <mesh name="mustard_bottle" file="mustard_bottle.obj"/>
+  </asset>
+  <worldbody>
+    <body>
+    <body name="object">
+      <geom material="mustard_bottle" mesh="mustard_bottle" class="visual"/>
+      <geom mesh="mustard_bottle" class="collision"/>
+    </body>
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.1" name="bottom_site" />
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 0.04" name="top_site" />
+      <site rgba="0 0 0 0" size="0.005" pos="0.005 0.005 0" name="horizontal_radius_site" />
+   </body>
+  </worldbody>
+</mujoco>

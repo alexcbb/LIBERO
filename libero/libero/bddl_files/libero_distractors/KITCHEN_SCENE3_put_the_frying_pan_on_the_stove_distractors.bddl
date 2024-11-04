@@ -1,0 +1,110 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the frying pan on the stove)
+    (:regions
+      (fork_2_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.315 0.225 -0.29 0.25)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    
+      (peach_1_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.1 0.2 0.125 0.225)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    
+      (mustard_bottle_0_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.25 -0.1 0.275 -0.0975)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    
+      (flat_stove_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.21000000000000002 0.19 -0.19 0.21000000000000002)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (frypan_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.07500000000000001 -0.275 -0.025 -0.225)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (moka_pot_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.025 -0.025 0.07500000000000001 0.025)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (cook_region
+          (:target flat_stove_1)
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+    flat_stove_1 - flat_stove
+  )
+
+  (:objects
+    fork_2 - fork
+    peach_1 - peach
+    mustard_bottle_0 - mustard_bottle
+    chefmate_8_frypan_1 - chefmate_8_frypan
+    moka_pot_1 - moka_pot
+  )
+
+  (:obj_of_interest
+    chefmate_8_frypan_1
+    flat_stove_1
+  )
+
+  (:init
+    (On fork_2 kitchen_table_fork_2_init_region)
+    (On peach_1 kitchen_table_peach_1_init_region)
+    (On mustard_bottle_0 kitchen_table_mustard_bottle_0_init_region)
+    (On flat_stove_1 kitchen_table_flat_stove_init_region)
+    (On chefmate_8_frypan_1 kitchen_table_frypan_init_region)
+    (On moka_pot_1 kitchen_table_moka_pot_init_region)
+  )
+
+  (:goal
+    (And (On chefmate_8_frypan_1 flat_stove_1_cook_region))
+  )
+
+)

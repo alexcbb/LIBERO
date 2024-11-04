@@ -1,0 +1,26 @@
+<mujoco model="banana">
+  <default>
+    <default class="visual">
+      <geom group="1" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="0" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="banana" file="banana.png"/>
+    <material name="banana" texture="banana" specular="0.4000000000000001" shininess="0.001"/>
+    <mesh name="banana" file="banana.obj"/>
+  </asset>
+  <worldbody>
+    <body>
+    <body name="object">
+      <geom material="banana" mesh="banana" class="visual"/>
+      <geom mesh="banana" class="collision"/>
+    </body>
+	      <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.04" name="bottom_site" />
+	      <site rgba="0 0 0 0" size="0.005" pos="0 0 0.04" name="top_site" />
+	      <site rgba="0 0 0 0" size="0.005" pos="0.005 0.005 0" name="horizontal_radius_site" />
+   </body>
+  </worldbody>
+</mujoco>
