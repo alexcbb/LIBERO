@@ -59,6 +59,7 @@ libero_suites = [
     "libero_goal",
     "libero_90",
     "libero_10",
+    "libero_distractors"
 ]
 task_maps = {}
 max_len = 0
@@ -200,6 +201,16 @@ class LIBERO_90(Benchmark):
             task_order_index == 0
         ), "[error] currently only support task order for 10-task suites"
         self.name = "libero_90"
+        self._make_benchmark()
+
+@register_benchmark
+class LIBERO_DISTRACTORS(Benchmark):
+    def __init__(self, task_order_index=0):
+        super().__init__(task_order_index=task_order_index)
+        assert (
+            task_order_index == 0
+        ), "[error] currently only support task order for 10-task suites"
+        self.name = "libero_distractors"
         self._make_benchmark()
 
 
