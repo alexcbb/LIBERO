@@ -11,7 +11,7 @@ class OnTheGroundPanda(ManipulatorModel):
         idn (int or str): Number or some other unique identification string for this robot instance
     """
     arms = ["right"]
-    
+
     def __init__(self, idn=0):
         super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
 
@@ -21,7 +21,7 @@ class OnTheGroundPanda(ManipulatorModel):
         )
 
     @property
-    def default_mount(self):
+    def default_base(self):
         return None
 
     @property
