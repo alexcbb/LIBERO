@@ -12,8 +12,8 @@ class MountedPanda(ManipulatorModel):
     """
 
     def __init__(self, idn=0):
+        self.arms = ["single"]
         super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
-
         # Set joint damping
         self.set_joint_attribute(
             attrib="damping", values=np.array((0.1, 0.1, 0.1, 0.1, 0.1, 0.01, 0.01))
@@ -57,5 +57,4 @@ class MountedPanda(ManipulatorModel):
 
     @property
     def arm_type(self):
-        self.arms = ["single"]
         return "single"

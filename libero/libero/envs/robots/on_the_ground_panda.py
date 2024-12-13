@@ -12,6 +12,7 @@ class OnTheGroundPanda(ManipulatorModel):
     """
 
     def __init__(self, idn=0):
+        self.arms = ["single"]
         super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
 
         # Set joint damping
@@ -61,5 +62,4 @@ class OnTheGroundPanda(ManipulatorModel):
 
     @property
     def arm_type(self):
-        self.arms = ["single"]
         return "single"
