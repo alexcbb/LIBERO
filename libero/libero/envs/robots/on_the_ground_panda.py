@@ -12,7 +12,6 @@ class OnTheGroundPanda(ManipulatorModel):
     """
 
     def __init__(self, idn=0):
-        self.arms = ["single"]
         super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
 
         # Set joint damping
@@ -26,11 +25,11 @@ class OnTheGroundPanda(ManipulatorModel):
 
     @property
     def default_gripper(self):
-        return "PandaGripper"
+        return {"right": "PandaGripper"}
 
     @property
     def default_controller_config(self):
-        return "default_panda"
+        return {"right": "default_panda"}
 
     @property
     def init_qpos(self):
