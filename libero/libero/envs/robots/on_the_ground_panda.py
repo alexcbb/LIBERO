@@ -10,7 +10,8 @@ class OnTheGroundPanda(ManipulatorModel):
     Args:
         idn (int or str): Number or some other unique identification string for this robot instance
     """
-
+    arms = ["right"]
+    
     def __init__(self, idn=0):
         super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
 
