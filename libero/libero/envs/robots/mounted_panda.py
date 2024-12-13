@@ -57,4 +57,5 @@ class MountedPanda(ManipulatorModel):
 
     @property
     def arm_type(self):
+        self.arms = ["single"]
         return "single"
