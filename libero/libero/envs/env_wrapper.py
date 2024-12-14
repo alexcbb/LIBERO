@@ -50,9 +50,16 @@ class ControlEnv:
         # Check if we're using a multi-armed environment and use env_configuration argument if so
 
         # Create environment
+        print(f"bddl file name: {bddl_file_name}")
+        print(f"Problem info: {problem_info}")
+        # Create environment
         self.problem_name = problem_info["problem_name"]
         self.domain_name = problem_info["domain_name"]
         self.language_instruction = problem_info["language_instruction"]
+
+        print(f"Task mapping for {self.problem_name} with full task mapping {TASK_MAPPING}")
+
+        
         self.env = TASK_MAPPING[self.problem_name](
             bddl_file_name,
             robots=robots,
@@ -131,6 +138,7 @@ class ControlEnv:
         self.env.reset_from_xml_string(xml_string)
 
     def seed(self, seed):
+        print(f"Setting seed to {seed} with env {type(self.env)}")
         self.env.seed(seed)
 
     def set_init_state(self, init_state):

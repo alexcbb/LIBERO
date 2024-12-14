@@ -1,8 +1,6 @@
 import numpy as np
 import os
 import robosuite.utils.transform_utils as T
-
-from copy import deepcopy
 from robosuite.environments.manipulation.manipulation_env import ManipulationEnv
 from robosuite.models.tasks import ManipulationTask
 from robosuite.utils.placement_samplers import SequentialCompositeSampler
@@ -861,5 +859,4 @@ class BDDLBaseDomain(ManipulationEnv):
             robots = [robots]
         for robot in robots:
             assert issubclass(ROBOT_CLASS_MAPPING[robot], FixedBaseRobot) or issubclass(
-                ROBOT_CLASS_MAPPING[robot], MobileRobot) or issubclass(ROBOT_CLASS_MAPPING[robot],
-                SingleArm), f"Only manipulator robots supported for manipulation environment! Got {ROBOT_CLASS_MAPPING[robot]}"
+                ROBOT_CLASS_MAPPING[robot], MobileRobot), f"Only manipulator robots supported for manipulation environment! Got {ROBOT_CLASS_MAPPING[robot]}"
