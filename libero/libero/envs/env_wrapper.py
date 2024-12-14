@@ -14,7 +14,7 @@ class ControlEnv:
         self,
         bddl_file_name,
         robots=["Panda"],
-        controller="OSC_POSE",
+        controller="BASIC",
         gripper_types="default",
         initialization_noise=None,
         use_camera_obs=True,
