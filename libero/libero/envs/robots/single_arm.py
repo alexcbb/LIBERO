@@ -54,7 +54,7 @@ class SingleArm(Robot):
         self,
         robot_type: str,
         idn=0,
-        controller_config=None,
+        composite_controller_config=None,
         initial_qpos=None,
         initialization_noise=None,
         mount_type="default",
@@ -63,7 +63,7 @@ class SingleArm(Robot):
     ):
 
         self.controller = None
-        self.controller_config = copy.deepcopy(controller_config)
+        self.controller_config = copy.deepcopy(composite_controller_config)
         self.gripper_type = gripper_type
         self.has_gripper = self.gripper_type is not None
 
