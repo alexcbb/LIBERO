@@ -1,36 +1,11 @@
 import numpy as np
 
-from robosuite.models.robots.manipulators.manipulator_model import ManipulatorModel
-from robosuite.utils.mjcf_utils import xml_path_completion
+from robosuite.models.robots.manipulators.panda import Panda
 
-
-class OnTheGroundPanda(ManipulatorModel):
-    """
-    Panda is a sensitive single-arm robot designed by Franka.
-    Args:
-        idn (int or str): Number or some other unique identification string for this robot instance
-    """
-    arms = ["right"]
-
-    def __init__(self, idn=0):
-        super().__init__(xml_path_completion("robots/panda/robot.xml"), idn=idn)
-
-        # Set joint damping
-        self.set_joint_attribute(
-            attrib="damping", values=np.array((0.1, 0.1, 0.1, 0.1, 0.1, 0.01, 0.01))
-        )
-
+class OnTheGroundPanda(Panda):
     @property
     def default_base(self):
         return None
-
-    @property
-    def default_gripper(self):
-        return {"right": "PandaGripper"}
-
-    @property
-    def default_controller_config(self):
-        return {"right": "default_panda"}
 
     @property
     def init_qpos(self):
@@ -51,15 +26,3 @@ class OnTheGroundPanda(ManipulatorModel):
                 0.42,
             ),
         }
-
-    @property
-    def top_offset(self):
-        return np.array((0, 0, 1.0))
-
-    @property
-    def _horizontal_radius(self):
-        return 0.5
-
-    @property
-    def arm_type(self):
-        return "single"
