@@ -49,14 +49,11 @@ class ControlEnv:
         problem_info = BDDLUtils.get_problem_info(bddl_file_name)
         # Check if we're using a multi-armed environment and use env_configuration argument if so
 
-        print(f"controller_configs before: {controller_configs}")
         keys =  [key for key in controller_configs["body_parts"].keys()]
         for key in keys:
             if "right" not in key:
                 controller_configs["body_parts"].pop(key)
-        print(f"controller_configs after: {controller_configs}")
 
-            
         # Create environment
         self.problem_name = problem_info["problem_name"]
         self.domain_name = problem_info["domain_name"]
