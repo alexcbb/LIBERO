@@ -155,9 +155,6 @@ class BDDLBaseDomain(ManipulationEnv):
             **kwargs,
         )
 
-    def seed(self, seed):
-        np.random.seed(seed)
-
     def reward(self, action=None):
         """
         Reward function for the task.
