@@ -60,6 +60,7 @@ class SingleArm(Robot):
         base_type="default",
         gripper_type="default",
         control_freq=20,
+        lite_physics=True,
     ):
 
         self.controller = None
@@ -86,10 +87,13 @@ class SingleArm(Robot):
         super().__init__(
             robot_type=robot_type,
             idn=idn,
+            composite_controller_config=composite_controller_config,
             initial_qpos=initial_qpos,
             initialization_noise=initialization_noise,
             base_type=base_type,
+            gripper_type=gripper_type,
             control_freq=control_freq,
+            lite_physics=lite_physics,
         )
 
     def _load_controller(self):
