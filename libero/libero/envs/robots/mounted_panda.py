@@ -1,6 +1,6 @@
 import numpy as np
 
-from robosuite.models.robots.manipulators.panda import Panda
+from robosuite.models.robots.manipulators.panda_robot import Panda
 
 class MountedPanda(Panda):
     @property
