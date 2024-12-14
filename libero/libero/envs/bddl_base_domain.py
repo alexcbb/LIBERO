@@ -154,6 +154,7 @@ class BDDLBaseDomain(ManipulationEnv):
             renderer=renderer,
             **kwargs,
         )
+        self.seed = lambda x: np.random.seed(x)
 
     def reward(self, action=None):
         """
