@@ -44,7 +44,9 @@ class ControlEnv:
             bddl_file_name
         ), f"[error] {bddl_file_name} does not exist!"
 
+        print(f"Controller: {controller}")
         controller_configs = suite.load_part_controller_config(default_controller=controller)
+        print(f"controller_configs: {controller_configs}")
 
         problem_info = BDDLUtils.get_problem_info(bddl_file_name)
         # Check if we're using a multi-armed environment and use env_configuration argument if so
