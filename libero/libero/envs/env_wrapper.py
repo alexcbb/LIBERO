@@ -47,6 +47,7 @@ class ControlEnv:
         controller_configs = suite.load_composite_controller_config(controller=controller)
 
         problem_info = BDDLUtils.get_problem_info(bddl_file_name)
+        # TODO : check the base 
         # Check if we're using a multi-armed environment and use env_configuration argument if so
 
         keys =  [key for key in controller_configs["body_parts"].keys()]

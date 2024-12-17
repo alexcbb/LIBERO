@@ -5,7 +5,7 @@ from robosuite.models.robots.manipulators.panda_robot import Panda
 class OnTheGroundPanda(Panda):
     @property
     def default_base(self):
-        return None
+        return "NullMount"
 
     @property
     def init_qpos(self):
